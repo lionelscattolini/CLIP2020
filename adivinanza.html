@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Adivinanza</title>
+  </head>
+  <body>
+    <!-- nav -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="adivinanza.html">Adivinanza</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- fin nav -->
+    <!-- adivinanza -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <p class="h4 mb-4">¿Cual es mi pelicula Favorita?</p>
+          <label for="respuesta">RESPUESTA</label>
+          <input
+            class="form-control"
+            type="text"
+            id="respuestaAdivinanza"
+            placeholder="Ingresa tu respuesta aqui"
+            required
+          />
+
+          <button
+            class="btn btn-primary"
+            id="boton-enviar"
+            onclick="adivinando()"
+            enabled
+          >
+            Verificar
+          </button>
+
+          <script>
+            var respuestaCorrecta = "joker";
+            var respuestaCorrecta2 = "Joker";
+            var contador = 0;
+
+            function adivinando() {
+              var rta = document.getElementById("respuestaAdivinanza").value;
+
+              if (rta == respuestaCorrecta || rta == respuestaCorrecta2) {
+                alert("ADIVINASTE");
+              } else {
+                alert("RESPUESTA INCORRECTA");
+                contador++;
+
+                if (contador <= 5) {
+                  if (contador == 1) {
+                    alert(
+                      "PISTA 1: Su Director es Todd Phillips (Tienes 5 intentos)"
+                    );
+                  }
+                  if (contador == 2) {
+                    alert(
+                      "PISTA 2: Uno de sus Actores es Brett Cullen (Tienes 4 intentos)"
+                    );
+                  }
+                  if (contador == 3) {
+                    alert(
+                      "PISTA 3: Es de Género Crimen Drama Thriller (Tienes 3 intentos)"
+                    );
+                  }
+                  if (contador == 4) {
+                    alert(
+                      "PISTA 4: Se Estreno en el año 2019 (Tienes 2 intentos) "
+                    );
+                  }
+                  if (contador == 5) {
+                    alert(
+                      "PISTA 5: En Otro Pais se la Traduce como EL RISAS (Tienes 1 intentos)"
+                    );
+                  }
+                } else {
+                  alert("PERDISTE NO TE QUEDAN MAS INTENTOS");
+                  document.getElementById("boton-enviar").disabled = true;
+                }
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+    <!-- fin adivinanza -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

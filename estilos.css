@@ -1,0 +1,25 @@
+div {
+  background-color: black;
+}
+h4,
+h5 {
+  color: #007bff;
+}
+p {
+  color: white;
+}
+th {
+  color: #007bff;
+}
+tr {
+  color: white;
+}
+address {
+  color: white;
+}
+form {
+  background-color: black;
+}
+label {
+  color: white;
+}

@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="estilos.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -29,54 +30,67 @@
             <li class="nav-item">
               <a class="nav-link" href="login.html">Login</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adivinanza.html">Adivinanza</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <!-- fin nav -->
-    <!-- Default form login -->
-<form class="text-center border border-light p-5" action="#!">
-
-    <p class="h4 mb-4">Sign in</p>
-
-    <!-- Email -->
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-    <!-- Password -->
-    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-
-    <div class="d-flex justify-content-around">
-        <div>
-            <!-- Remember me -->
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+    <!-- form register -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <form class="text-center border border-primary p-5">
+            <div class="form-group">
+              <p class="h4 mb-4">Register</p>
+              <label for="registroNombre"> Nombre </label>
+              <input class="form-control" id="registronombre" required />
             </div>
+            <div class="form-group">
+              <label for="registroApellido"> Apellido </label>
+              <input class="form-control" id="registroApellido" required />
+            </div>
+            <div class="form-group">
+              <label for="registroEmail"> Email </label>
+              <input
+                type="email"
+                class="form-control"
+                id="registroEmail"
+                pattern=".+@gmail.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="registroContraseña"> Contraseña </label>
+              <input
+                type="password"
+                class="form-control"
+                id="registroContraseña"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="repetirContraseña"> Repetir Contraseña </label>
+              <input
+                type="password"
+                class="form-control"
+                id="repetirContraseña"
+                required
+              />
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" required /> Soy una Persona
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Regristarse</button>
+          </form>
         </div>
-        <div>
-            <!-- Forgot password -->
-            <a href="">Forgot password?</a>
-        </div>
+      </div>
     </div>
-
-    <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
-
-    <!-- Register -->
-    <p>Not a member?
-        <a href="">Register</a>
-    </p>
-
-    <!-- Social login -->
-    <p>or sign in with:</p>
-
-    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
-    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
-    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
-
-</form>
-<!-- Default form login -->
+    <!-- form register -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
